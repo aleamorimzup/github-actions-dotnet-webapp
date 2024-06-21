@@ -1,0 +1,66 @@
+name: Custom Workflow
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 */3 * *' # Executa a cada 3 dias
+
+jobs:
+  push_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Run custom script on push
+        run: |
+          echo "This is a custom script running on push event"
+          # Adicione aqui o seu script personalizado
+
+  scheduled_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install PyGithub
+        run: pip install PyGithub
+
+      - name: Run custom script on schedule
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Checking for open issues older than 3 days..."
+          python - <<EOF
+          import os
+          from datetime import datetime, timedelta
+          from github import Github
+
+          # Autenticação com o token do GitHub
+          g = Github(os.getenv('GITHUB_TOKEN'))
+          repo = g.get_repo(os.getenv('GITHUB_REPOSITORY'))
+
+          # Data limite para considerar issues antigas
+          limit_date = datetime.now() - timedelta(days=3)
+
+          # Verifica e fecha issues abertas há mais de 3 dias
+          for issue in repo.get_issues(state='open'):
+              if issue.created_at < limit_date:
+                  issue.create_comment("This issue is being closed automatically as it has been open for more than 3 days.")
+                  issue.edit(state='closed')
+                  print(f"Closed issue #{issue.number} - {issue.title}")
+
+          print("Issue check completed.")
+          EOF
