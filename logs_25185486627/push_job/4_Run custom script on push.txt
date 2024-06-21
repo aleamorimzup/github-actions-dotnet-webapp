@@ -1,0 +1,6 @@
+﻿2024-06-21T21:51:50.6875351Z ##[group]Run echo "This is a custom script running on push event"
+2024-06-21T21:51:50.6876177Z [36;1mecho "This is a custom script running on push event"[0m
+2024-06-21T21:51:50.6876751Z [36;1m# Adicione aqui o seu script personalizado[0m
+2024-06-21T21:51:50.7001203Z shell: /usr/bin/bash -e {0}
+2024-06-21T21:51:50.7001631Z ##[endgroup]
+2024-06-21T21:51:50.7166181Z This is a custom script running on push event

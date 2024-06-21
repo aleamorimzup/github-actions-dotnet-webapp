@@ -1,0 +1,13 @@
+﻿2024-06-21T21:51:46.9759867Z ##[group]Run actions/setup-node@v2
+2024-06-21T21:51:46.9760606Z with:
+2024-06-21T21:51:46.9760957Z   node-version: 14
+2024-06-21T21:51:46.9761400Z   always-auth: false
+2024-06-21T21:51:46.9761905Z   check-latest: false
+2024-06-21T21:51:46.9762499Z   token: ***
+2024-06-21T21:51:46.9762906Z ##[endgroup]
+2024-06-21T21:51:47.1090462Z Attempting to download 14...
+2024-06-21T21:51:47.6595240Z Acquiring 14.21.3 - x64 from https://github.com/actions/node-versions/releases/download/14.21.3-4202774076/node-14.21.3-linux-x64.tar.gz
+2024-06-21T21:51:48.3946694Z Extracting ...
+2024-06-21T21:51:48.4063863Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/9b93f805-37fe-4a0d-b0af-8537eceda936 -f /home/runner/work/_temp/4054897a-aeba-4b52-8890-21b8cd40bd95
+2024-06-21T21:51:49.1295553Z Adding to the cache ...
+2024-06-21T21:51:50.6714964Z Done

@@ -1,0 +1,6 @@
+﻿2024-06-21T21:51:47.8323744Z ##[group]Run actions/setup-python@v2
+2024-06-21T21:51:47.8324258Z with:
+2024-06-21T21:51:47.8324695Z   python-version: 3.8
+2024-06-21T21:51:47.8325242Z   token: ***
+2024-06-21T21:51:47.8325541Z ##[endgroup]
+2024-06-21T21:51:47.9574142Z Successfully setup CPython (3.8.18)

@@ -1,0 +1,31 @@
+﻿2024-06-21T21:51:53.7238488Z ##[group]Run echo "Checking for open issues older than 3 days..."
+2024-06-21T21:51:53.7239248Z [36;1mecho "Checking for open issues older than 3 days..."[0m
+2024-06-21T21:51:53.7239801Z [36;1mpython - <<EOF[0m
+2024-06-21T21:51:53.7240221Z [36;1mimport os[0m
+2024-06-21T21:51:53.7240625Z [36;1mfrom datetime import datetime, timedelta[0m
+2024-06-21T21:51:53.7241116Z [36;1mfrom github import Github[0m
+2024-06-21T21:51:53.7241542Z [36;1m[0m
+2024-06-21T21:51:53.7241921Z [36;1m# Autenticação com o token do GitHub[0m
+2024-06-21T21:51:53.7242445Z [36;1mg = Github(os.getenv('GITHUB_TOKEN'))[0m
+2024-06-21T21:51:53.7243014Z [36;1mrepo = g.get_repo(os.getenv('GITHUB_REPOSITORY'))[0m
+2024-06-21T21:51:53.7243502Z [36;1m[0m
+2024-06-21T21:51:53.7243905Z [36;1m# Data limite para considerar issues antigas[0m
+2024-06-21T21:51:53.7244520Z [36;1mlimit_date = datetime.now() - timedelta(days=3)[0m
+2024-06-21T21:51:53.7244984Z [36;1m[0m
+2024-06-21T21:51:53.7245406Z [36;1m# Verifica e fecha issues abertas há mais de 3 dias[0m
+2024-06-21T21:51:53.7246132Z [36;1mfor issue in repo.get_issues(state='open'):[0m
+2024-06-21T21:51:53.7246661Z [36;1m    if issue.created_at < limit_date:[0m
+2024-06-21T21:51:53.7248001Z [36;1m        issue.create_comment("This issue is being closed automatically as it has been open for more than 3 days.")[0m
+2024-06-21T21:51:53.7248823Z [36;1m        issue.edit(state='closed')[0m
+2024-06-21T21:51:53.7249440Z [36;1m        print(f"Closed issue #{issue.number} - {issue.title}")[0m
+2024-06-21T21:51:53.7250050Z [36;1m[0m
+2024-06-21T21:51:53.7250349Z [36;1mprint("Issue check completed.")[0m
+2024-06-21T21:51:53.7250792Z [36;1mEOF[0m
+2024-06-21T21:51:53.7311988Z shell: /usr/bin/bash -e {0}
+2024-06-21T21:51:53.7312373Z env:
+2024-06-21T21:51:53.7312867Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2024-06-21T21:51:53.7313659Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2024-06-21T21:51:53.7314406Z   GITHUB_TOKEN: ***
+2024-06-21T21:51:53.7314850Z ##[endgroup]
+2024-06-21T21:51:53.7399139Z Checking for open issues older than 3 days...
+2024-06-21T21:51:54.6258476Z Issue check completed.

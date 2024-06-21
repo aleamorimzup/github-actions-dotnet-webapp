@@ -1,0 +1,65 @@
+﻿2024-06-21T21:51:47.9708884Z ##[group]Run pip install PyGithub
+2024-06-21T21:51:47.9709405Z [36;1mpip install PyGithub[0m
+2024-06-21T21:51:47.9824563Z shell: /usr/bin/bash -e {0}
+2024-06-21T21:51:47.9825002Z env:
+2024-06-21T21:51:47.9825482Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2024-06-21T21:51:47.9826095Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2024-06-21T21:51:47.9826615Z ##[endgroup]
+2024-06-21T21:51:51.3346354Z Collecting PyGithub
+2024-06-21T21:51:51.3774356Z   Downloading PyGithub-2.3.0-py3-none-any.whl.metadata (3.8 kB)
+2024-06-21T21:51:51.4179763Z Collecting pynacl>=1.4.0 (from PyGithub)
+2024-06-21T21:51:51.4216595Z   Downloading PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl.metadata (8.6 kB)
+2024-06-21T21:51:51.4743673Z Collecting requests>=2.14.0 (from PyGithub)
+2024-06-21T21:51:51.4781708Z   Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+2024-06-21T21:51:51.5052387Z Collecting pyjwt>=2.4.0 (from pyjwt[crypto]>=2.4.0->PyGithub)
+2024-06-21T21:51:51.5090851Z   Downloading PyJWT-2.8.0-py3-none-any.whl.metadata (4.2 kB)
+2024-06-21T21:51:51.5428990Z Collecting typing-extensions>=4.0.0 (from PyGithub)
+2024-06-21T21:51:51.5465771Z   Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+2024-06-21T21:51:51.5977726Z Collecting urllib3>=1.26.0 (from PyGithub)
+2024-06-21T21:51:51.6017809Z   Downloading urllib3-2.2.2-py3-none-any.whl.metadata (6.4 kB)
+2024-06-21T21:51:51.6268496Z Collecting Deprecated (from PyGithub)
+2024-06-21T21:51:51.6304867Z   Downloading Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+2024-06-21T21:51:51.8704871Z Collecting cryptography>=3.4.0 (from pyjwt[crypto]>=2.4.0->PyGithub)
+2024-06-21T21:51:51.8745050Z   Downloading cryptography-42.0.8-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2024-06-21T21:51:52.0120616Z Collecting cffi>=1.4.1 (from pynacl>=1.4.0->PyGithub)
+2024-06-21T21:51:52.0191493Z   Downloading cffi-1.16.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+2024-06-21T21:51:52.1290268Z Collecting charset-normalizer<4,>=2 (from requests>=2.14.0->PyGithub)
+2024-06-21T21:51:52.1333121Z   Downloading charset_normalizer-3.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+2024-06-21T21:51:52.1575922Z Collecting idna<4,>=2.5 (from requests>=2.14.0->PyGithub)
+2024-06-21T21:51:52.1609740Z   Downloading idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+2024-06-21T21:51:52.1982802Z Collecting certifi>=2017.4.17 (from requests>=2.14.0->PyGithub)
+2024-06-21T21:51:52.2016607Z   Downloading certifi-2024.6.2-py3-none-any.whl.metadata (2.2 kB)
+2024-06-21T21:51:52.3160220Z Collecting wrapt<2,>=1.10 (from Deprecated->PyGithub)
+2024-06-21T21:51:52.3220399Z   Downloading wrapt-1.16.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2024-06-21T21:51:52.3427489Z Collecting pycparser (from cffi>=1.4.1->pynacl>=1.4.0->PyGithub)
+2024-06-21T21:51:52.3461395Z   Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+2024-06-21T21:51:52.3900602Z Downloading PyGithub-2.3.0-py3-none-any.whl (354 kB)
+2024-06-21T21:51:52.3991031Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 354.4/354.4 kB 53.9 MB/s eta 0:00:00
+2024-06-21T21:51:52.4024257Z Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+2024-06-21T21:51:52.4111500Z Downloading PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (856 kB)
+2024-06-21T21:51:52.4228700Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 856.7/856.7 kB 89.5 MB/s eta 0:00:00
+2024-06-21T21:51:52.4264042Z Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+2024-06-21T21:51:52.4312699Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 19.4 MB/s eta 0:00:00
+2024-06-21T21:51:52.4347144Z Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+2024-06-21T21:51:52.4405936Z Downloading urllib3-2.2.2-py3-none-any.whl (121 kB)
+2024-06-21T21:51:52.4466482Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.4/121.4 kB 28.7 MB/s eta 0:00:00
+2024-06-21T21:51:52.4503421Z Downloading Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+2024-06-21T21:51:52.4565243Z Downloading certifi-2024.6.2-py3-none-any.whl (164 kB)
+2024-06-21T21:51:52.4626695Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164.4/164.4 kB 42.6 MB/s eta 0:00:00
+2024-06-21T21:51:52.4691053Z Downloading cffi-1.16.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (444 kB)
+2024-06-21T21:51:52.4795798Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 444.7/444.7 kB 51.0 MB/s eta 0:00:00
+2024-06-21T21:51:52.4832147Z Downloading charset_normalizer-3.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (141 kB)
+2024-06-21T21:51:52.4885489Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.1/141.1 kB 38.7 MB/s eta 0:00:00
+2024-06-21T21:51:52.4939246Z Downloading cryptography-42.0.8-cp37-abi3-manylinux_2_28_x86_64.whl (3.9 MB)
+2024-06-21T21:51:52.5296135Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 114.3 MB/s eta 0:00:00
+2024-06-21T21:51:52.5330746Z Downloading idna-3.7-py3-none-any.whl (66 kB)
+2024-06-21T21:51:52.5380909Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 kB 18.9 MB/s eta 0:00:00
+2024-06-21T21:51:52.5416434Z Downloading wrapt-1.16.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (83 kB)
+2024-06-21T21:51:52.5464359Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 26.0 MB/s eta 0:00:00
+2024-06-21T21:51:52.5499533Z Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+2024-06-21T21:51:52.5555605Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.6/117.6 kB 29.8 MB/s eta 0:00:00
+2024-06-21T21:51:52.6836518Z Installing collected packages: wrapt, urllib3, typing-extensions, pyjwt, pycparser, idna, charset-normalizer, certifi, requests, Deprecated, cffi, pynacl, cryptography, PyGithub
+2024-06-21T21:51:53.4729512Z Successfully installed Deprecated-1.2.14 PyGithub-2.3.0 certifi-2024.6.2 cffi-1.16.0 charset-normalizer-3.3.2 cryptography-42.0.8 idna-3.7 pycparser-2.22 pyjwt-2.8.0 pynacl-1.5.0 requests-2.32.3 typing-extensions-4.12.2 urllib3-2.2.2 wrapt-1.16.0
+2024-06-21T21:51:53.6251491Z 
+2024-06-21T21:51:53.6252822Z [notice] A new release of pip is available: 23.0.1 -> 24.1
+2024-06-21T21:51:53.7192777Z [notice] To update, run: pip install --upgrade pip
